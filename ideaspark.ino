@@ -131,9 +131,13 @@ void get_weather_data() {
              if (weather_code.toInt() == 45 || weather_code.toInt() == 48 ){
              lcd.drawBitmap(30, 20, met_bitmap_white_100x100_fog_day, 100, 100, ST77XX_ORANGE);
             }
-             if (weather_code.toInt() > 50 && weather_code.toInt() < 68 ){
+             if (weather_code.toInt() > 50 && weather_code.toInt() < 60 ){
              lcd.drawBitmap(30, 20, met_bitmap_white_100x100_partlycloudy_day, 100, 100, ST77XX_ORANGE);
             }
+             if (weather_code.toInt() > 60 && weather_code.toInt() < 68 ){
+             lcd.drawBitmap(30, 20, met_bitmap_white_100x100_rainshowers_day, 100, 100, ST77XX_ORANGE);
+            }
+
              if (weather_code.toInt() > 70 && weather_code.toInt() < 78 ){
              lcd.drawBitmap(30, 20, met_bitmap_white_100x100_snowshowers_day, 100, 100, ST77XX_ORANGE);
             }
@@ -154,9 +158,13 @@ void get_weather_data() {
              if (weather_code.toInt() == 45 || weather_code.toInt() == 48 ){
              lcd.drawBitmap(30, 20, met_bitmap_white_100x100_fog_night, 100, 100, ST77XX_ORANGE);
             }
-             if (weather_code.toInt() > 50 && weather_code.toInt() < 68 ){
+             if (weather_code.toInt() > 50 && weather_code.toInt() < 60 ){
              lcd.drawBitmap(30, 20, met_bitmap_white_100x100_partlycloudy_night, 100, 100, ST77XX_ORANGE);
             }
+             if (weather_code.toInt() > 60 && weather_code.toInt() < 68 ){
+             lcd.drawBitmap(30, 20, met_bitmap_white_100x100_rainshowers_night, 100, 100, ST77XX_ORANGE);
+            }
+
              if (weather_code.toInt() > 70 && weather_code.toInt() < 78 ){
              lcd.drawBitmap(30, 20, met_bitmap_white_100x100_snowshowers_night, 100, 100, ST77XX_ORANGE);
             }
@@ -250,19 +258,19 @@ void get_weather_description(int code) {
       weather_description = "ХМАРНО МОЖЛИВИЙ ДОЩ";
       break;
     case 61:
-      weather_description = "ХМАРНО МОЖЛИВИЙ ДОЩ";
+      weather_description = "ДОЩ";
       break;
     case 63:
-      weather_description = "ХМАРНО МОЖЛИВИЙ ДОЩ";
+      weather_description = "ДОЩ";
       break;
     case 65:
-      weather_description = "ХМАРНО МОЖЛИВИЙ ДОЩ";
+      weather_description = "ДОЩ";
       break;
     case 66:
-      weather_description = "ХМАРНО МОЖЛИВИЙ ДОЩ";
+      weather_description = "ДОЩ";
       break;
     case 67:
-      weather_description = "ХМАРНО МОЖЛИВИЙ ДОЩ";
+      weather_description = "ДОЩ";
       break;
     case 71:
       weather_description = "МОЖЛИВИЙ СНIГ";
